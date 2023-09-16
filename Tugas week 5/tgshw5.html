@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEWORK 5</title> 
+
+
+    <style>
+        #ListPendaftar th, #ListPendaftar td {
+        padding: 8px 16px;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+
+    <!-- Tab "Registrasi" -->
+    <div id="Registrasi" class="tabcontent my-5 mx-5">
+        <h2>Form Registrasi</h2>
+        <form id="formRegistrasi">
+         
+            <label for="nama">Nama :</label>
+            <input type="text" class="form-control my-2" id="nama" placeholder="Nama (Minimal 10 Karakter)"   required minlength="10">
+
+            <label for="umur">Umur:</label>
+            <input type="number" class="form-control my-2" id="umur" placeholder="Umur (Minimal 25 Tahun)"   required min="25">
+
+            <label for="uangSangu">Uang Sangu:</label>
+            <input type="number" class="form-control my-2" id="uangSangu" placeholder="Uang Sangu (Minimal 100 ribu, Maksimal 1 juta)"   required min="100000">
+
+
+            <button type="submit" class="btn btn-success my-3">Submit</button>
+ 
+        
+
+        </form>
+    </div>
+
+    <!-- Tab "List Pendaftar" -->
+    <div id="ListPendaftar" class="tabcontent table table-hover my-5 mx-5">
+        <h2>List Pendaftar</h2>
+        <table id="tabelPendaftar">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama</th>
+                    <th>Umur</th>
+                    <th>Uang Sangu</th>
+                </tr>
+            </thead>
+            <tbody id="resumePendaftar"></tbody>
+        </table>
+        <p id="rataRataPendaftar"></p>
+    </div>
+
+   
+
+    <div class="tabs d-flex flex-row mb-3 mx-5">  
+        <button  class="tablink btn btn-primary btn-sm mx-1" onclick="openTab('Registrasi')" >Registrasi</button>
+        <button  class="tablink btn btn-secondary btn-sm" onclick="openTab('ListPendaftar')" >List Pendaftar</button>
+    </div>
+    <script src="tgshw5.js"></script>
+</body>
+</html>
